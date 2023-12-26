@@ -21,7 +21,7 @@ const Index = () => {
 
       {/* <AppListWrapper /> */}
 
-      <Detail />
+      {/* <Detail /> */}
     </>
   );
 };

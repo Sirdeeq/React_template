@@ -8,21 +8,20 @@ import Dashboard from "../pages/dashboard";
 import Index from "../pages/Index";
 import AppListWrapper from "../pages/registration/AppListWrapper";
 
-const appLayoutRoutes = [{ path: "/", element: <SignIn /> }];
-
-const dashboardLayoutRoutes = [
-  // { path: "*", element: <Index /> },
-  { path: "*", element: <Dashboard /> },
+const appLayoutRoutes = [
+  { path: "/", element: <SignIn /> },
   { path: "/register", element: <Index /> },
   { path: "/applist", element: <AppListWrapper /> },
 ];
+
+const dashboardLayoutRoutes = [{ path: "*", element: <Dashboard /> }];
 
 const AppNavigation = () => {
   return (
     <Router>
       <Routes>
         <Route
-          path="/"
+          path="/*"
           element={
             <AppLayout>
               <Routes>
