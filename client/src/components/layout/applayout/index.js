@@ -32,6 +32,7 @@ const AppLayout = ({ children }) => {
     { to: "/", label: "Home" },
     { to: "/register", label: "Register" },
     { to: "/applist", label: "App List" },
+    { to: "/detail", label: "Detail" },
   ];
 
   const footerContent = <p>&copy; 2023 GEMS. All rights reserved.</p>;
