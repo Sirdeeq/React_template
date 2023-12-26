@@ -24,7 +24,7 @@ const AppNavigation = () => {
           path="/*"
           element={
             <AppLayout>
-              <Routes>
+              <Routes>  
                 {appLayoutRoutes.map((route, index) => (
                   <Route
                     key={index}
