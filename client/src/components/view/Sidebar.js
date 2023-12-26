@@ -1,8 +1,8 @@
 // Sidebar.js
-import React from 'react';
-import { Nav, NavItem, NavLink } from 'reactstrap';
-import { Link } from 'react-router-dom';
-import dashboardRoutes from '../layout/dashboardlayout/dashboardRoutes';
+import React from "react";
+import { Nav, NavItem, NavLink } from "reactstrap";
+import { Link } from "react-router-dom";
+import dashboardRoutes from "../layout/dashboardlayout/dashboardRoutes";
 
 const Sidebar = () => {
   return (

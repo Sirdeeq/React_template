@@ -28,7 +28,11 @@ const AppLayout = ({ children }) => {
     flex: "0 0 auto", // Fixed footer at the bottom
   };
 
-  const links = [{ to: "/", label: "Home" }];
+  const links = [
+    { to: "/", label: "Home" },
+    { to: "/dashboard/*", label: "Dashboard" },
+    { to: "/dashboard/applist", label: "App List" },
+  ];
 
   const footerContent = <p>&copy; 2023 GEMS. All rights reserved.</p>;
 
@@ -40,7 +44,7 @@ const AppLayout = ({ children }) => {
       <main style={mainStyle}>
         <Row>
           {React.Children.map(children, (child, index) => (
-            <Col key={index} xs="12" md="4">
+            <Col key={index} xs="12" md="6">
               {child}
             </Col>
           ))}

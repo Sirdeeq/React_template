@@ -5,11 +5,16 @@ import AppLayout from "../components/layout/applayout";
 import DashboardLayout from "../components/layout/dashboardlayout";
 import SignIn from "../pages/auth/SignIn";
 import Dashboard from "../pages/dashboard";
+import Index from "../pages/Index";
+import AppListWrapper from "../pages/registration/AppListWrapper";
 
 const appLayoutRoutes = [{ path: "/", element: <SignIn /> }];
 
 const dashboardLayoutRoutes = [
-  { path: "/dashboard", element: <Dashboard /> }
+  // { path: "*", element: <Index /> },
+  { path: "*", element: <Dashboard /> },
+  { path: "/register", element: <Index /> },
+  { path: "/applist", element: <AppListWrapper /> },
 ];
 
 const AppNavigation = () => {

@@ -13,10 +13,13 @@ const DashboardLayout = ({ children }) => {
     backgroundColor: appColor || "#f3f6f4",
     minHeight: "100vh",
     paddingTop: "0",
-    paddingBottom: "0"
+    paddingBottom: "0",
   };
 
-  const links = [{ to: "/", label: "Home" }];
+  const links = [
+    { to: "/", label: "Home" },
+    { to: "/dashboard/applist", label: "App Lists" },
+  ];
 
   const footerContent = <p>&copy; 2023 GEMS. All rights reserved.</p>;
   return (
