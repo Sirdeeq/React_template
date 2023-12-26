@@ -30,7 +30,7 @@ const AppLayout = ({ children }) => {
 
   const links = [
     { to: "/", label: "Home" },
-    { to: "/dashboard/*", label: "Dashboard" },
+    { to: "/register", label: "Register" },
     { to: "/applist", label: "App List" },
   ];
 
