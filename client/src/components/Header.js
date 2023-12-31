@@ -6,7 +6,7 @@ import {
   NavItem,
   NavLink,
   NavbarToggler,
-  Collapse
+  Collapse,
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -19,7 +19,8 @@ const Header = ({ brand, links }) => {
   const appColor = useSelector((state) => state.app.bgColor);
 
   const navbarStyle = {
-    backgroundColor: appColor || "#A78BFA"
+    // backgroundColor: appColor || "#A78BFA",
+    backgroundColor: "#A78BFA",
   };
 
   return (

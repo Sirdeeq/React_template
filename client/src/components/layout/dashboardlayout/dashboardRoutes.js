@@ -1,6 +1,5 @@
 // dashboardRoutes.js
 import Dashboard from "../../../pages/dashboard";
-import AppListWrapper from "../../../pages/registration/AppListWrapper";
 
 const dashboardRoutes = [
   {

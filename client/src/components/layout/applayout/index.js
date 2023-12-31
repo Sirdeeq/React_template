@@ -6,13 +6,15 @@ import { Row, Col } from "reactstrap";
 
 const AppLayout = ({ children }) => {
   const appColor = useSelector((state) => state.app.bgColor);
-  const brand = useSelector((state) => state.app.logo);
+  // const brand = useSelector((state) => state.app.logo);
+  const brand = "Gems Applications";
 
   const layoutStyle = {
     display: "flex",
     flexDirection: "column",
     minHeight: "100vh",
-    backgroundColor: appColor || "#f3f6f4",
+    // backgroundColor: appColor || "#f3f6f4",
+    backgroundColor: "#f3f6f4",
   };
 
   const headerStyle = {
@@ -42,7 +44,7 @@ const AppLayout = ({ children }) => {
       <header style={headerStyle}>
         <Header brand={brand} links={links} />
       </header>
-      <main className="container" style={mainStyle}>
+      <main style={mainStyle}>
         <Row>
           {React.Children.map(children, (child, index) => (
             <Col key={index} xs="12">

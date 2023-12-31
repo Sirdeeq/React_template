@@ -103,7 +103,7 @@ const RegisterForm = () => {
   ];
 
   return (
-    <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-900 dark:text-gray-100">
+    <div className="container flex flex-col max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-900 dark:text-gray-100">
       <CustomCard
         header="Register your App Here"
         subtitle="Fill all the required information"
