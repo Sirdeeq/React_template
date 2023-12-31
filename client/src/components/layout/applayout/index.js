@@ -42,10 +42,10 @@ const AppLayout = ({ children }) => {
       <header style={headerStyle}>
         <Header brand={brand} links={links} />
       </header>
-      <main style={mainStyle}>
+      <main className="container" style={mainStyle}>
         <Row>
           {React.Children.map(children, (child, index) => (
-            <Col key={index} xs="12" md="6">
+            <Col key={index} xs="12">
               {child}
             </Col>
           ))}
