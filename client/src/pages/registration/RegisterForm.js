@@ -3,7 +3,9 @@ import toast from "react-hot-toast";
 import CustomForm from "../../components/custom/CustomForm";
 import CustomCard from "../../components/custom/CustomCard";
 import ApplicationContext from "../../context/application-context";
+import { useNavigate } from "react-router-dom";
 const RegisterForm = () => {
+  const navigate = useNavigate();
   const ctx = useContext(ApplicationContext);
   //  -------- FORM INPUT VALUES ---------
 
@@ -14,6 +16,7 @@ const RegisterForm = () => {
     techStatement: "",
     probStatement: "",
     solnStatement: "",
+    detailedInfo: "",
   });
 
   //----- HANDLE INPUT CHANGE --------
@@ -33,12 +36,15 @@ const RegisterForm = () => {
       !formData.devID ||
       !formData.techStatement ||
       !formData.probStatement ||
-      !formData.solnStatement
+      !formData.solnStatement ||
+      !formData.detailedInfo
     ) {
       toast.error("check your inputs");
       return;
     }
     ctx.handleAdd(formData);
+    navigate("/applist");
+
     console.log("Form submitted:", formData);
     toast.success("Form submitted");
     setFormData({
@@ -48,8 +54,10 @@ const RegisterForm = () => {
       techStatement: "",
       probStatement: "",
       solnStatement: "",
+      detailedInfo: "",
     });
   };
+
   // ------ FORM INPUT FIELDS -------
   const formFields = [
     {
@@ -78,7 +86,7 @@ const RegisterForm = () => {
     },
     {
       label: "Technology used",
-      type: "text",
+      type: "textarea",
       id: "techStatement",
       placeholder: "eg React, PHP ...",
       value: formData.techStatement,
@@ -86,7 +94,7 @@ const RegisterForm = () => {
     },
     {
       label: "Problem Statement",
-      type: "text",
+      type: "textarea",
       id: "probStatement",
       placeholder: "Problem to be addressed",
       value: formData.probStatement,
@@ -94,10 +102,18 @@ const RegisterForm = () => {
     },
     {
       label: "Solution Statement",
-      type: "text",
+      type: "textarea",
       id: "solnStatement",
       placeholder: "Problem to be addressed",
       value: formData.solnStatement,
+      onChange: handleInputChange,
+    },
+    {
+      label: "Detailed Information",
+      type: "textarea",
+      id: "detailedInfo",
+      placeholder: "What is the application all about",
+      value: formData.detailedInfo,
       onChange: handleInputChange,
     },
   ];

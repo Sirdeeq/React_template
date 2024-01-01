@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import CustomCard from "../../components/custom/CustomCard";
+import ApplicationContext from "../../context/application-context";
 
 const Detail = (props) => {
+  const ctx = useContext(ApplicationContext);
+  const detailedApp = ctx.detailedApp;
+  console.log(`the app is ${detailedApp.id}`);
   return (
     <div className="container">
       <CustomCard>
         <div>
           <h3>
-            <span className="text-success">App Name:</span> Application Name
+            <span className="text-success">App Name:</span>{" "}
+            {detailedApp.appName}
           </h3>
           <p className="lead">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            aliquip ex ea commodo consequat.
           </p>
         </div>
         <hr />
@@ -27,10 +29,7 @@ const Detail = (props) => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              nisi ut aliquip ex ea commodo consequat.
             </p>
           </fieldset>
         </div>
@@ -41,10 +40,7 @@ const Detail = (props) => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              nisi ut aliquip ex ea commodo consequat.
             </p>
           </fieldset>
         </div>
@@ -55,10 +51,7 @@ const Detail = (props) => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              nisi ut aliquip ex ea commodo consequat.
             </p>
           </fieldset>
         </div>

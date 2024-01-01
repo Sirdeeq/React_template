@@ -5,10 +5,13 @@ const ApplicationContext = React.createContext({
   handleAdd: () => {},
   handleDelete: () => {},
   handleShowForm: () => {},
+  handleSelectedApp: () => {},
+  selectedApp: {},
 });
 
 export const ApplicationContextProvider = (props) => {
   const [registeredApps, setRegisteredApps] = useState([]);
+  const [selectedApp, setSelectedApp] = useState({});
   const [showForm, setShowForm] = useState(true);
 
   // ------- ADD APPLICATION --------
@@ -29,6 +32,12 @@ export const ApplicationContextProvider = (props) => {
     );
   };
 
+  // -------- SHOW SELECTED --------
+  const showSelected = (app) => {
+    setSelectedApp(app);
+    console.log(selectedApp);
+  };
+
   //   ----- TOGGLE SHOW FORM -------
   const toggle = () => {
     setShowForm(!showForm);
@@ -41,6 +50,8 @@ export const ApplicationContextProvider = (props) => {
         handleDelete: deleteBook,
         handleShowForm: toggle,
         showForm: showForm,
+        handleSelectedApp: showSelected,
+        detailedApp: selectedApp,
       }}
     >
       {props.children}
