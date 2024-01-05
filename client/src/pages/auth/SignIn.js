@@ -4,22 +4,25 @@ import { FaGoogle, FaFacebook, FaTwitter } from "react-icons/fa";
 import toast from "react-hot-toast";
 import {
   CustomButton,
-  CustomButtonGroup
+  CustomButtonGroup,
 } from "../../components/custom/CustomButton";
 import CustomForm from "../../components/custom/CustomForm";
 import CustomCard from "../../components/custom/CustomCard";
+import { useNavigate } from "react-router-dom";
 
 export default function SignIn() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     email: "",
-    password: ""
+    password: "",
   });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
 
@@ -27,6 +30,7 @@ export default function SignIn() {
     e.preventDefault();
     console.log("Form submitted:", formData);
     toast.success("Form submitted");
+    navigate("/register");
   };
 
   const formFields = [
@@ -36,7 +40,7 @@ export default function SignIn() {
       id: "email",
       placeholder: "leroy@jenkins.com",
       value: formData.email,
-      onChange: handleInputChange
+      onChange: handleInputChange,
     },
     {
       label: "Password",
@@ -44,8 +48,8 @@ export default function SignIn() {
       id: "password",
       placeholder: "*****",
       value: formData.password,
-      onChange: handleInputChange
-    }
+      onChange: handleInputChange,
+    },
   ];
 
   const handleSocialLogin = (provider) => {

@@ -14,45 +14,25 @@ const Detail = (props) => {
             <span className="text-success">App Name:</span>{" "}
             {detailedApp.appName}
           </h3>
-          <p className="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
+          <p className="lead">{detailedApp.detailedInfo}</p>
         </div>
         <hr />
         <div className="problem">
           <fieldset>
             <legend className="text-success">Problem Statement</legend>
-            <p className="lead">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <p className="lead">{detailedApp.probStatement}</p>
           </fieldset>
         </div>
         <div className="solution">
           <fieldset>
             <legend className="text-success">Solution Statement</legend>
-            <p className="lead">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <p className="lead">{detailedApp.solnStatement}</p>
           </fieldset>
         </div>
         <div className="technology">
           <fieldset>
             <legend className="text-success">Technology Statement</legend>
-            <p className="lead">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <p className="lead">{detailedApp.techStatement}</p>
           </fieldset>
         </div>
         <hr />

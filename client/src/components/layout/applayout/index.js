@@ -1,11 +1,11 @@
 import React from "react";
 import Header from "../../Header";
 import Footer from "../../Footer";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { Row, Col } from "reactstrap";
 
 const AppLayout = ({ children }) => {
-  const appColor = useSelector((state) => state.app.bgColor);
+  // const appColor = useSelector((state) => state.app.bgColor);
   // const brand = useSelector((state) => state.app.logo);
   const brand = "Gems Applications";
 
@@ -34,7 +34,7 @@ const AppLayout = ({ children }) => {
     { to: "/", label: "Home" },
     { to: "/register", label: "Register" },
     { to: "/applist", label: "App List" },
-    { to: "/detail", label: "Detail" },
+    // { to: "/detail", label: "Detail" },
   ];
 
   const footerContent = <p>&copy; 2023 GEMS. All rights reserved.</p>;
