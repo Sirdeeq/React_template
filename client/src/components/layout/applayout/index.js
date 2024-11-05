@@ -1,18 +1,20 @@
 import React from "react";
 import Header from "../../Header";
 import Footer from "../../Footer";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { Row, Col } from "reactstrap";
 
 const AppLayout = ({ children }) => {
-  const appColor = useSelector((state) => state.app.bgColor);
-  const brand = useSelector((state) => state.app.logo);
+  // const appColor = useSelector((state) => state.app.bgColor);
+  // const brand = useSelector((state) => state.app.logo);
+  const brand = "Gems Applications";
 
   const layoutStyle = {
     display: "flex",
     flexDirection: "column",
     minHeight: "100vh",
-    backgroundColor: appColor || "#f3f6f4",
+    // backgroundColor: appColor || "#f3f6f4",
+    backgroundColor: "#f3f6f4",
   };
 
   const headerStyle = {
@@ -28,7 +30,12 @@ const AppLayout = ({ children }) => {
     flex: "0 0 auto", // Fixed footer at the bottom
   };
 
-  const links = [{ to: "/", label: "Home" }];
+  const links = [
+    { to: "/", label: "Home" },
+    { to: "/register", label: "Register" },
+    { to: "/applist", label: "App List" },
+    // { to: "/detail", label: "Detail" },
+  ];
 
   const footerContent = <p>&copy; 2023 GEMS. All rights reserved.</p>;
 
@@ -40,7 +47,7 @@ const AppLayout = ({ children }) => {
       <main style={mainStyle}>
         <Row>
           {React.Children.map(children, (child, index) => (
-            <Col key={index} xs="12" md="4">
+            <Col key={index} xs="12">
               {child}
             </Col>
           ))}

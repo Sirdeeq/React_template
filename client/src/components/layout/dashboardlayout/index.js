@@ -13,7 +13,7 @@ const DashboardLayout = ({ children }) => {
     backgroundColor: appColor || "#f3f6f4",
     minHeight: "100vh",
     paddingTop: "0",
-    paddingBottom: "0"
+    paddingBottom: "0",
   };
 
   const links = [{ to: "/", label: "Home" }];

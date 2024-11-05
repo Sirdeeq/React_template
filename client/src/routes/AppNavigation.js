@@ -5,22 +5,28 @@ import AppLayout from "../components/layout/applayout";
 import DashboardLayout from "../components/layout/dashboardlayout";
 import SignIn from "../pages/auth/SignIn";
 import Dashboard from "../pages/dashboard";
+import AppListWrapper from "../pages/registration/AppListWrapper";
+import RegisterForm from "../pages/registration/RegisterForm";
+import Detail from "../pages/registration/Detail";
 
-const appLayoutRoutes = [{ path: "/", element: <SignIn /> }];
-
-const dashboardLayoutRoutes = [
-  { path: "/dashboard", element: <Dashboard /> }
+const appLayoutRoutes = [
+  { path: "/", element: <SignIn /> },
+  { path: "/register", element: <RegisterForm /> },
+  { path: "/applist", element: <AppListWrapper /> },
+  { path: "/detail", element: <Detail /> },
 ];
+
+const dashboardLayoutRoutes = [{ path: "*", element: <Dashboard /> }];
 
 const AppNavigation = () => {
   return (
     <Router>
       <Routes>
         <Route
-          path="/"
+          path="/*"
           element={
             <AppLayout>
-              <Routes>  
+              <Routes>
                 {appLayoutRoutes.map((route, index) => (
                   <Route
                     key={index}

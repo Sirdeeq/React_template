@@ -6,8 +6,8 @@ const dashboardRoutes = [
     path: "/dashboard/",
     icon: "home",
     title: "Home",
-    component: Dashboard
-  }
+    component: Dashboard,
+  },
 ];
 
 export default dashboardRoutes;

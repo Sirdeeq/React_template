@@ -5,7 +5,7 @@ const initialState = {
   logo: "Your Logo",
   otherDetails: null,
   error: null,
-  loading: false
+  loading: false,
 };
 
 const appSlice = createSlice({
@@ -26,8 +26,8 @@ const appSlice = createSlice({
     },
     setLoading: (state, action) => {
       state.loading = action.payload;
-    }
-  }
+    },
+  },
 });
 
 export const {
@@ -35,7 +35,7 @@ export const {
   setAppLogo,
   setOtherDetails,
   setError,
-  setLoading
+  setLoading,
 } = appSlice.actions;
 
 export default appSlice.reducer;
